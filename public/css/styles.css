@@ -1,0 +1,20 @@
+body {
+  max-width: 800px;
+  margin:0 auto;
+  font-family: "Arial";
+  font-size: 21px;
+}
+
+a { color: #0033bb; text-decoration: none; }
+a:hover { color: #ff0000;  text-decoration: none; }
+
+input {
+  font-family: "Arial";
+  font-size: 21px;
+}
+
+button {
+  font-family: "Arial";
+  font-size: 21px;
+}
+

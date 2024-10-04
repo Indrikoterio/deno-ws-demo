@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Deno Web Socket Demo</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Deno Web Socket Demo">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body>
+
+    <center><h2>Deno Web Socket Demo</h2></center>
+
+    <center>
+    <table>
+      <tr>
+        <td><input id="send-message" value="Hello from the client!">
+        <button onClick="sendToServer(socket)">Send</button></td>
+      </tr>
+      <tr>
+        <td><div id="receive-message"></div></td>
+      </tr>
+    </table>
+    </center>
+
+    <script>
+
+      const socket = new WebSocket("ws://localhost:4000/ws");
+
+      socket.onmessage = (message) => {
+        //console.log(message.data);
+        let receiveField = document.getElementById("receive-message");
+        receiveField.innerHTML = message.data;
+      };
+
+    </script>
+    <script src="js/communication.js"></script>
+
+  </body>
+</html>
