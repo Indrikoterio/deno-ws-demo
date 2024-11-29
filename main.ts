@@ -2,9 +2,9 @@
 // Uses Oak for routing.
 // Cleve Lendon  2024
 
-import { send } from "@oak/oak/send";
+import { send } from "jsr:@oak/oak/send";
 import { Application } from "jsr:@oak/oak/application";
-import { Router, RouterContext } from "jsr:@oak/oak/router";
+import { Router, type RouterContext } from "jsr:@oak/oak/router";
 
 const router = new Router();
 const app    = new Application();
